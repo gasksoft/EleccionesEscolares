@@ -30,6 +30,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Elecciones.Presentation.CommonWinForm.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -72,6 +73,7 @@
     <Compile Include="DashBoardItemUc.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="MasterForm.Designer.vb">
       <DependentUpon>MasterForm.vb</DependentUpon>
     </Compile>

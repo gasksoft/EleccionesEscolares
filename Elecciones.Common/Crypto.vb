@@ -1,7 +1,9 @@
 ﻿Imports System.IO
 Imports System.Security.Cryptography
 
-Public Class Crypto
+Public NotInheritable Class Crypto
+    Private Sub New()
+    End Sub
     Public Shared ReadOnly MagicText As String = GetHash("Copyright GaSKSoft 2017")
     Shared Function EncryptStringToBytes(plainText As String, key() As Byte, iv() As Byte) As Byte()
         If plainText Is Nothing OrElse plainText.Length <= 0 Then
@@ -22,8 +24,8 @@ Public Class Crypto
                 Using csEncrypt As New CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write)
                     Using swEncrypt As New StreamWriter(csEncrypt)
                         swEncrypt.Write(plainText)
+                        encrypted = msEncrypt.ToArray()
                     End Using
-                    encrypted = msEncrypt.ToArray()
                 End Using
             End Using
         End Using

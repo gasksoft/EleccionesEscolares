@@ -8,8 +8,8 @@ Public Class MesaBussiness
         Return _mesaData.GetMesas
     End Function
 
-    Public Sub QuitarMiembro(m As MiembroMesa)
-        _mesaData.QuitarMiembro(m)
+    Public Sub QuitarMiembro(miembro As MiembroMesa)
+        _mesaData.QuitarMiembro(miembro)
     End Sub
 
     Public Sub Guardar()

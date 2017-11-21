@@ -24,7 +24,7 @@ Public Class ListasDlg
     Private Sub ListaDataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ListaDataGridView.CellDoubleClick
         'Text = e.ColumnIndex & "  " & e.RowIndex
         If e.ColumnIndex = 3 Then
-            Dim ofd As New OpenFileDialog With {
+            Using ofd As New OpenFileDialog With {
                 .AddExtension = True,
                 .CheckFileExists = True,
                 .CheckPathExists = True,
@@ -33,10 +33,11 @@ Public Class ListasDlg
                 .Multiselect = False
             }
 
-            If ofd.ShowDialog(Me) = Global.System.Windows.Forms.DialogResult.OK Then
-                Lista.LogoImage = Image.FromFile(ofd.FileName)
-                ListaBindingSource.ResetCurrentItem()
-            End If
+                If ofd.ShowDialog(Me) = Global.System.Windows.Forms.DialogResult.OK Then
+                    Lista.LogoImage = Image.FromFile(ofd.FileName)
+                    ListaBindingSource.ResetCurrentItem()
+                End If
+            End Using
         End If
     End Sub
 

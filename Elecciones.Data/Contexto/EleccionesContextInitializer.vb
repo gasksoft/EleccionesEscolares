@@ -14,6 +14,10 @@ Namespace Contexto
         End Sub
 
         Protected Overrides Sub Seed(context As EleccionesContext)
+            If context Is Nothing Then
+                Throw New ArgumentNullException(NameOf(context))
+            End If
+
             Dim grados As New List(Of Grado) From {
                     New Grado With {.IdNivel = ENivel.Inicial, .IdGrado = 3},
                     New Grado With {.IdNivel = ENivel.Inicial, .IdGrado = 4},

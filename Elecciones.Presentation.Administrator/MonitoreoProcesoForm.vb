@@ -15,8 +15,9 @@ Public Class MonitoreoProcesoForm
     End Sub
 
     Private Sub ResultadosBtn_Click(sender As Object, e As EventArgs) Handles ResultadosBtn.Click
-        Dim dlg As New Reports.ResultadosGeneralesReport
-        dlg.Votos = _procesoBussiness.GetVotos
-        dlg.ShowDialog(Me)
+        Using dlg As New Reports.ResultadosGeneralesReport
+            dlg.Votos = _procesoBussiness.GetVotos
+            dlg.ShowDialog(Me)
+        End Using
     End Sub
 End Class

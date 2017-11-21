@@ -9,8 +9,8 @@ Public Class MesaData
         Return New ObservableListSource(Of Mesa)(_ctx.Mesas.ToList)
     End Function
 
-    Public Sub QuitarMiembro(m As MiembroMesa)
-        _ctx.Participantes.Remove(m)
+    Public Sub QuitarMiembro(miembro As MiembroMesa)
+        _ctx.Participantes.Remove(miembro)
     End Sub
 
     Public Sub Guardar()

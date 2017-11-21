@@ -30,7 +30,7 @@
     <ProductName>Administrador</ProductName>
     <PublisherName>GaSK Soft</PublisherName>
     <SuiteName>Elecciones Escolares 2017</SuiteName>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -57,6 +57,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Elecciones.Presentation.Administrator.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -151,6 +152,7 @@
     <Compile Include="ChooseMesaDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="LeerFotosForm.Designer.vb">
       <DependentUpon>LeerFotosForm.vb</DependentUpon>
     </Compile>

@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Elecciones.Presentation.CommonWinForm")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyCompany("GaSK Soft")>
 <Assembly: AssemblyProduct("Elecciones.Presentation.CommonWinForm")>
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2017")>
+<Assembly: AssemblyCopyright("Copyright © GaSK Soft 2017")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

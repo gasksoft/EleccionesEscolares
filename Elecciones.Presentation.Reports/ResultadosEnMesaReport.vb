@@ -2,9 +2,9 @@
 Imports Elecciones.DataModel
 
 Public Class ResultadosEnMesaReport
-    Private ReadOnly _sb As New MesaBussiness
+    'Private ReadOnly _sb As New MesaBussiness
     Property Mesa As Mesa
-    Dim seccion As Seccion
+    'Dim seccion As Seccion
     Dim votos As List(Of Voto)
 
     Private Sub PadronElectoralReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load

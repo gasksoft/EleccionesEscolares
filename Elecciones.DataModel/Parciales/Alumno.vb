@@ -49,10 +49,11 @@ Partial Public Class Alumno
             Dim ancho = Value.Width
             Dim alto = Value.Height
             Dim factor = ancho / alto
-            Dim alto2 As Integer = 210 / factor
-            Using img As New Bitmap(210, alto2)
+            Dim ancho2 = 210
+            Dim alto2 As Integer = ancho2 / factor
+            Using img As New Bitmap(ancho2, alto2)
                 Using g As Graphics = Graphics.FromImage(img)
-                    g.DrawImage(Value, 0, 0, 210, alto2)
+                    g.DrawImage(Value, 0, 0, ancho2, alto2)
                     Using ms As New MemoryStream
                         img.Save(ms, ImageFormat.Jpeg)
                         Foto = ms.GetBuffer

@@ -49,7 +49,7 @@ Public Class DashBoardItemUc
     Protected Sub OnPropertyChanged(<CallerMemberName> Optional propertyName As String = Nothing)
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
     End Sub
-    Protected Function SetProperty(Of t)(ByRef storage As t, value As t, <CallerMemberName> Optional propertyName As String = Nothing) As Boolean
+    Protected Function SetProperty(Of T)(ByRef storage As T, value As T, <CallerMemberName> Optional propertyName As String = Nothing) As Boolean
         If Equals(storage, value) Then
             Return False
         End If

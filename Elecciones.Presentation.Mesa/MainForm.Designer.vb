@@ -76,12 +76,12 @@ Partial Class MainForm
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.CerrarMesaBtn = New System.Windows.Forms.Button()
         Me.VerConteoVotosMesaBtn = New System.Windows.Forms.Button()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CerrarMesaBtn = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
         ApellidosNombresLabel = New System.Windows.Forms.Label()
         DescSeccionLabel = New System.Windows.Forms.Label()
         CargoMiembroMesaLabel = New System.Windows.Forms.Label()
@@ -498,10 +498,11 @@ Partial Class MainForm
         '
         'FotografiaPictureBox1
         '
+        Me.FotografiaPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FotografiaPictureBox1.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.AlumnoBindingSource, "Fotografia", True))
-        Me.FotografiaPictureBox1.Location = New System.Drawing.Point(522, 10)
+        Me.FotografiaPictureBox1.Location = New System.Drawing.Point(521, 18)
         Me.FotografiaPictureBox1.Name = "FotografiaPictureBox1"
-        Me.FotografiaPictureBox1.Size = New System.Drawing.Size(221, 251)
+        Me.FotografiaPictureBox1.Size = New System.Drawing.Size(210, 280)
         Me.FotografiaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.FotografiaPictureBox1.TabIndex = 7
         Me.FotografiaPictureBox1.TabStop = False
@@ -606,17 +607,18 @@ Partial Class MainForm
         '
         'FotografiaPictureBox2
         '
+        Me.FotografiaPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FotografiaPictureBox2.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.AlumnoBindingSource, "Fotografia", True))
-        Me.FotografiaPictureBox2.Location = New System.Drawing.Point(54, 3)
+        Me.FotografiaPictureBox2.Location = New System.Drawing.Point(103, 33)
         Me.FotografiaPictureBox2.Name = "FotografiaPictureBox2"
-        Me.FotografiaPictureBox2.Size = New System.Drawing.Size(301, 361)
+        Me.FotografiaPictureBox2.Size = New System.Drawing.Size(210, 280)
         Me.FotografiaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.FotografiaPictureBox2.TabIndex = 1
         Me.FotografiaPictureBox2.TabStop = False
         '
         'ApellidosNombresLabel5
         '
-        Me.ApellidosNombresLabel5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "DescSeccion", True))
+        Me.ApellidosNombresLabel5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnoBindingSource, "ApellidosNombres", True))
         Me.ApellidosNombresLabel5.Location = New System.Drawing.Point(364, 54)
         Me.ApellidosNombresLabel5.Name = "ApellidosNombresLabel5"
         Me.ApellidosNombresLabel5.Size = New System.Drawing.Size(674, 56)
@@ -676,6 +678,16 @@ Partial Class MainForm
         Me.TabPage6.Text = "Conteo de Votos"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
+        'CerrarMesaBtn
+        '
+        Me.CerrarMesaBtn.Font = New System.Drawing.Font("Segoe UI Light", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CerrarMesaBtn.Location = New System.Drawing.Point(547, 19)
+        Me.CerrarMesaBtn.Name = "CerrarMesaBtn"
+        Me.CerrarMesaBtn.Size = New System.Drawing.Size(525, 115)
+        Me.CerrarMesaBtn.TabIndex = 1
+        Me.CerrarMesaBtn.Text = "Cerrar Mesa"
+        Me.CerrarMesaBtn.UseVisualStyleBackColor = True
+        '
         'VerConteoVotosMesaBtn
         '
         Me.VerConteoVotosMesaBtn.Font = New System.Drawing.Font("Segoe UI Light", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -696,6 +708,18 @@ Partial Class MainForm
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Mesa Cerrada"
         Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(3, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(1187, 293)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Mesa Cerrada" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proceso electoral terminado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Espere los resultados con el admin" &
+    "istrador"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
@@ -720,28 +744,6 @@ Partial Class MainForm
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'CerrarMesaBtn
-        '
-        Me.CerrarMesaBtn.Font = New System.Drawing.Font("Segoe UI Light", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CerrarMesaBtn.Location = New System.Drawing.Point(547, 19)
-        Me.CerrarMesaBtn.Name = "CerrarMesaBtn"
-        Me.CerrarMesaBtn.Size = New System.Drawing.Size(525, 115)
-        Me.CerrarMesaBtn.TabIndex = 1
-        Me.CerrarMesaBtn.Text = "Cerrar Mesa"
-        Me.CerrarMesaBtn.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(3, 3)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(1187, 293)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Mesa Cerrada" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proceso electoral terminado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Espere los resultados con el admin" &
-    "istrador"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'MainForm
         '

@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Revise los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("Elecciones.Presentation.Reports")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("HP Inc.")> 
-<Assembly: AssemblyProduct("Elecciones.Presentation.Reports")> 
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2017")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("GaSK Soft")>
+<Assembly: AssemblyProduct("Elecciones.Presentation.Reports")>
+<Assembly: AssemblyCopyright("Copyright © GaSK Soft 2017")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

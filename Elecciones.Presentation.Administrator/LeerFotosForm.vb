@@ -18,8 +18,7 @@ Public Class LeerFotosForm
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         _alumnos = _alumnoBussiness.GetAlumnos
-        Dim worker As New BackgroundWorker
-        worker.WorkerReportsProgress = True
+        Dim worker As New BackgroundWorker With {.WorkerReportsProgress = True}
         AddHandler worker.ProgressChanged, AddressOf WorkerNextImage
         AddHandler worker.RunWorkerCompleted, AddressOf WorkerCompleted
         AddHandler worker.DoWork, AddressOf ProcesaImagenes

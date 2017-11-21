@@ -67,8 +67,8 @@ Public Class MainForm
                     Case EEstadoMesa.EnCabina
                         If _votante Is Nothing Then
                             _votante = _alumnoBussiness.GetAlumnoByDni(_mesa.UltimoDni)
-                            AlumnoBindingSource.DataSource = _votante
                         End If
+                        AlumnoBindingSource.DataSource = _votante
                         TabControl1.TabPages.Add(TabPage4)
                         Exit Select
                     Case EEstadoMesa.EsperaCierre

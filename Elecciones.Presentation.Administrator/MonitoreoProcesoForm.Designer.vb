@@ -48,7 +48,6 @@ Partial Class MonitoreoProcesoForm
         '
         'ResultadosBtn
         '
-        Me.ResultadosBtn.Enabled = False
         Me.ResultadosBtn.Location = New System.Drawing.Point(382, 19)
         Me.ResultadosBtn.Name = "ResultadosBtn"
         Me.ResultadosBtn.Size = New System.Drawing.Size(176, 58)
@@ -60,7 +59,7 @@ Partial Class MonitoreoProcesoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(805, 428)
+        Me.ClientSize = New System.Drawing.Size(597, 104)
         Me.Controls.Add(Me.ResultadosBtn)
         Me.Controls.Add(Me.TerminarProcesoBtn)
         Me.Controls.Add(Me.IniciarProcesoBtn)

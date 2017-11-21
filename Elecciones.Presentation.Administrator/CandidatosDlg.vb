@@ -12,9 +12,9 @@ Public Class CandidatosDlg
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim dlg As New Reports.CandidatosReport
-        dlg.Lista = _lista
-        dlg.ShowDialog(Me)
+        Using dlg As New Reports.CandidatosReport With {.Lista = _lista}
+            dlg.ShowDialog(Me)
+        End Using
     End Sub
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OK_Button.Click
@@ -92,19 +92,20 @@ Public Class CandidatosDlg
         Handles Foto1.DoubleClick, Foto2.DoubleClick, Foto3.DoubleClick,
         Foto4.DoubleClick, Foto5.DoubleClick, Foto6.DoubleClick, Foto7.DoubleClick
         Dim candidato As Candidato = sender.tag
-        Dim dlg As New BuscarAlumnoDlg
-        If dlg.ShowDialog(Me) = DialogResult.OK Then
-            If dlg.Alumno?.TipoParticipante <> "Votante" Then
-                MsgBox("Este alumno ya esta participando como candidato o como miembro de mesa.")
-                Return
+        Using dlg As New BuscarAlumnoDlg
+            If dlg.ShowDialog(Me) = DialogResult.OK Then
+                If dlg.Alumno?.TipoParticipante <> "Votante" Then
+                    MsgBox("Este alumno ya esta participando como candidato o como miembro de mesa.")
+                    Return
+                End If
+                If candidato?.Alumno IsNot Nothing Then
+                    _listaBussiness.QuitarCandidato(candidato)
+                End If
+                candidato.Dni = dlg.Alumno.Dni
+                _lista.Candidatos.Add(candidato)
+                _listaBussiness.Guardar()
+                EnlazarCandidatos()
             End If
-            If candidato?.Alumno IsNot Nothing Then
-                _listaBussiness.QuitarCandidato(candidato)
-            End If
-            candidato.Dni = dlg.Alumno.Dni
-            _lista.Candidatos.Add(candidato)
-            _listaBussiness.Guardar()
-            EnlazarCandidatos()
-        End If
+        End Using
     End Sub
 End Class

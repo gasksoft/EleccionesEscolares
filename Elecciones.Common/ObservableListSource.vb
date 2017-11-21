@@ -16,7 +16,7 @@ Public Class ObservableListSource(Of T As Class)
         MyBase.New(collection)
     End Sub
 
-    Sub New(list As List(Of T))
+    Sub New(list As Collection(Of T))
         MyBase.New(list)
     End Sub
 

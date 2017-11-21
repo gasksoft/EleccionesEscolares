@@ -9,9 +9,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Elecciones.DataModel")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyCompany("GaSK Soft")>
 <Assembly: AssemblyProduct("Elecciones.DataModel")>
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2017")>
+<Assembly: AssemblyCopyright("Copyright © GaSK Soft 2017")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
