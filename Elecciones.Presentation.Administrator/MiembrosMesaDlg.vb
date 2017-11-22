@@ -12,6 +12,10 @@ Public Class MiembrosMesaDlg
         EnlazarMiembros()
     End Sub
 
+    Private Sub PrintMiembrosMesaBtn_Click(sender As Object, e As EventArgs) Handles PrintMiembrosMesaBtn.Click
+        Call New Reports.MiembrosMesaReport With {.Mesa = _mesa}.ShowDialog(Me)
+    End Sub
+
     Private Sub MiembrosMesaDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MesaBindingSource.DataSource = _mesaBussiness.GetMesas
         EnlazarMiembros()
@@ -75,6 +79,7 @@ Public Class MiembrosMesaDlg
     End Sub
 
     Private Sub SortearBtn_Click(sender As Object, e As EventArgs) Handles SortearBtn.Click
+        If MsgBox("Desea volver a sortear los miembros de mesa?", MsgBoxStyle.YesNo Or MsgBoxStyle.DefaultButton2) = MsgBoxResult.No Then Return
         Dim mms = _mesa.MiembrosMesa
         For Each m In mms
             _mesaBussiness.QuitarMiembro(m)

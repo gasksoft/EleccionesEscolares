@@ -73,6 +73,12 @@
     <Compile Include="DashBoardItemUc.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="EstadoMesaUc.Designer.vb">
+      <DependentUpon>EstadoMesaUc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoMesaUc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="MasterForm.Designer.vb">
       <DependentUpon>MasterForm.vb</DependentUpon>
@@ -99,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DashBoardItemUc.resx">
       <DependentUpon>DashBoardItemUc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadoMesaUc.resx">
+      <DependentUpon>EstadoMesaUc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterForm.resx">
       <DependentUpon>MasterForm.vb</DependentUpon>

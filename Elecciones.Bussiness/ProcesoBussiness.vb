@@ -14,4 +14,12 @@ Public Class ProcesoBussiness
     Public Function GetVotos() As List(Of Voto)
         Return _procesoData.GetVotos
     End Function
+
+    Public Sub ResetData()
+        _procesoData.ResetData
+    End Sub
+
+    Public Function GetMesas() As List(Of Mesa)
+        Return _procesoData.GetMesas
+    End Function
 End Class

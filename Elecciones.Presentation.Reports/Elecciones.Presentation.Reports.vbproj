@@ -96,6 +96,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="MiembrosMesaReport.Designer.vb">
+      <DependentUpon>MiembrosMesaReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MiembrosMesaReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -143,6 +149,10 @@
     <None Include="welcome.mht" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MiembrosMesaReport.rdlc" />
+    <EmbeddedResource Include="MiembrosMesaReport.resx">
+      <DependentUpon>MiembrosMesaReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultadosGeneralesReport.rdlc" />
     <EmbeddedResource Include="ResultadosEnMesaReport.resx">
       <DependentUpon>ResultadosEnMesaReport.vb</DependentUpon>

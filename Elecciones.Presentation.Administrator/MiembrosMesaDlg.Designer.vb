@@ -60,6 +60,7 @@ Partial Class MiembrosMesaDlg
         Me.Seccion1 = New System.Windows.Forms.Label()
         Me.ApeNomb1 = New System.Windows.Forms.Label()
         Me.SortearBtn = New System.Windows.Forms.Button()
+        Me.PrintMiembrosMesaBtn = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.MesaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -510,6 +511,15 @@ Partial Class MiembrosMesaDlg
         Me.SortearBtn.Text = "Sortear miembros de mesa"
         Me.SortearBtn.UseVisualStyleBackColor = True
         '
+        'PrintMiembrosMesaBtn
+        '
+        Me.PrintMiembrosMesaBtn.Location = New System.Drawing.Point(635, 18)
+        Me.PrintMiembrosMesaBtn.Name = "PrintMiembrosMesaBtn"
+        Me.PrintMiembrosMesaBtn.Size = New System.Drawing.Size(280, 25)
+        Me.PrintMiembrosMesaBtn.TabIndex = 4
+        Me.PrintMiembrosMesaBtn.Text = "Imprimir listado de miembros de mesa"
+        Me.PrintMiembrosMesaBtn.UseVisualStyleBackColor = True
+        '
         'MiembrosMesaDlg
         '
         Me.AcceptButton = Me.OK_Button
@@ -517,6 +527,7 @@ Partial Class MiembrosMesaDlg
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(959, 518)
+        Me.Controls.Add(Me.PrintMiembrosMesaBtn)
         Me.Controls.Add(Me.SortearBtn)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.MesaComboBox)
@@ -585,4 +596,5 @@ Partial Class MiembrosMesaDlg
     Friend WithEvents Seccion1 As Label
     Friend WithEvents ApeNomb1 As Label
     Friend WithEvents SortearBtn As Button
+    Friend WithEvents PrintMiembrosMesaBtn As Button
 End Class
